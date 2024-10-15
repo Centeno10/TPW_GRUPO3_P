@@ -1,0 +1,90 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+  font-family: Arial, sans-serif; /* Tipo de fuente */
+  display: flex; /* Utiliza flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Altura total de la ventana del navegador */
+  margin: 0; /* Elimina márgenes predeterminados */
+  background-color: #ffffff; /* Color de fondo */
+}
+
+/* Contenedor principal para los cursos */
+.curso-container {
+  display: flex; /* Utiliza flexbox para la disposición de las tarjetas */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en múltiples filas */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+/* Estilo para cada tarjeta de curso */
+.curso-card {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Gradiente de fondo */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 25px; /* Espaciado interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
+  transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+  width: 250px; /* Ancho fijo de la tarjeta */
+  text-align: center; /* Texto centrado */
+  color: white; /* Color del texto */
+  margin: 0px; /* Espacio entre tarjetas */
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.curso-card img {
+  width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+  border-radius: 15px 15px 0 0; /* Bordes redondeados solo en la parte superior */
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta */
+.curso-card:hover {
+  transform: scale(1.05); /* Escala la tarjeta ligeramente */
+}
+
+/* Contenido dentro de cada tarjeta */
+.card-contenido {
+  padding: 10px; /* Espaciado interno del contenido */
+}
+
+/* Estilo para el título de la tarjeta */
+.card-contenido h2 {
+  margin: 20px 0; /* Margen superior e inferior */
+}
+
+/* Estilo para los párrafos dentro de la tarjeta */
+.card-contenido p {
+  margin: 10px 0 20px; /* Margen superior, inferior y lateral */
+}
+
+/* Estilo para los botones dentro de la tarjeta */
+.card-contenido button {
+  background-color: #2980b9; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  color: white; /* Color del texto del botón */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: background-color 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.card-contenido button:hover {
+  background-color: #1c6a91; /* Cambio de color en hover */
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 600px) {
+  .curso-card {
+    width: 80%; /* Ancho del 80% en pantallas pequeñas */
+    margin: 10px auto; /* Centra la tarjeta y agrega margen */
+  }
+}
+
+/* Ocultar el scrollbar en navegadores basados en WebKit */
+::-webkit-scrollbar {
+  display: none; /* Oculta el scrollbar */
+}
+
+/* Asegurarse de que el contenido siga siendo desplazable */
+body {
+  overflow: auto; /* Permite el desplazamiento en el cuerpo */
+}
