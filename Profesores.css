@@ -1,0 +1,86 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente principal de la página */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina padding por defecto */
+    background-color: white; /* Color de fondo blanco */
+    color: #333; /* Color del texto gris oscuro */
+    overflow-x: hidden; /* Evita que se muestre un desplazamiento horizontal */
+}
+
+/* Estilo para los encabezados h2 */
+h2 {
+    text-align: center; /* Centra el texto del encabezado */
+    font-size: 3rem; /* Tamaño de fuente grande para el encabezado */
+    margin-bottom: 50px; /* Espacio inferior para separar del contenido siguiente */
+}
+
+/* Contenedor principal del carrusel */
+.carrusel-contenedor {
+    display: flex; /* Usa flexbox para alinear elementos en una fila */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    position: relative; /* Posición relativa para posicionar botones */
+    width: 90%; /* Ancho del contenedor al 90% del espacio disponible */
+    margin: 90px auto 10px auto; /* Espaciado: 90px arriba, automático a los lados, 10px abajo */
+    padding: 0; /* Elimina cualquier padding que pueda haber */
+}
+
+/* Estilo del carrusel */
+.carrusel {
+    display: grid; /* Usa grid layout para organizar elementos */
+    grid-template-columns: repeat(5, 200px); /* Define 5 columnas de 200px cada una */
+    grid-gap: 20px; /* Espacio entre los elementos del grid */
+    overflow: hidden; /* Oculta el contenido que se desborda del contenedor */
+    width: 80%; /* Ancho del carrusel al 80% del contenedor padre */
+    scroll-behavior: smooth; /* Suaviza el desplazamiento al interactuar */
+}
+
+/* Estilo para cada profesor dentro del carrusel */
+.profesor {
+    text-align: center; /* Centra el texto dentro del contenedor del profesor */
+}
+
+/* Estilo para las imágenes de los profesores */
+.profesor img {
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    width: 150px; /* Ancho de la imagen */
+    height: 150px; /* Altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
+    margin-bottom: 10px; /* Espacio inferior para separar la imagen del texto */
+}
+
+/* Estilo para el nombre del profesor */
+.profesor p {
+    font-weight: bold; /* Hace que el texto sea negrita */
+    margin: 0; /* Elimina márgenes por defecto del párrafo */
+}
+
+/* Estilo para los botones de navegación */
+.prev-btn, .next-btn {
+    background-color: rgba(52, 110, 114); /* Color de fondo para los botones */
+    color: white; /* Color del texto de los botones */
+    border: none; /* Elimina bordes por defecto */
+    font-size: 2rem; /* Tamaño de fuente grande para los botones */
+    padding: 10px; /* Espaciado interno (padding) en los botones */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    position: absolute; /* Posiciona los botones en relación al contenedor */
+    top: 50%; /* Posición vertical centrada */
+    transform: translateY(-50%); /* Ajusta la posición para centrar correctamente */
+    z-index: 10; /* Asegura que los botones estén por encima de otros elementos */
+}
+
+/* Estilo específico para el botón de anterior */
+.prev-btn {
+    left: 0; /* Posiciona el botón en la esquina izquierda */
+}
+
+/* Estilo específico para el botón de siguiente */
+.next-btn {
+    right: 0; /* Posiciona el botón en la esquina derecha */
+}
+
+/* Efecto al pasar el mouse sobre los botones */
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(52, 110, 114); /* Cambia el color de fondo al pasar el mouse */
+}
