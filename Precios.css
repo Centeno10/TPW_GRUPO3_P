@@ -1,0 +1,133 @@
+/* Reset básico para evitar márgenes y paddings por defecto */
+* {
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina paddings */
+  box-sizing: border-box; /* Asegura que padding y borde se incluyan en el tamaño total */
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+  font-family: Arial, sans-serif; /* Fuente principal de la página */
+  background-color: #ffffff; /* Color de fondo blanco */
+  display: flex; /* Usa flexbox para centrar el contenido */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  height: 100vh; /* Altura del viewport */
+  margin: 0; /* Asegúrate de que no haya margen en el body */
+  padding: 0; /* Sin padding en el body */
+  overflow: auto; /* El contenido seguirá siendo desplazable */
+}
+
+/* Contenedor principal para los precios */
+.pricing-container {
+  text-align: center; /* Centra el texto dentro del contenedor */
+  margin-top: 10px; /* Espacio superior adicional */
+}
+
+/* Estilo para el encabezado principal */
+h1 {
+  color: #004d66; /* Color del texto del encabezado */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Estilo para los párrafos */
+p {
+  color: #004d66; /* Color del texto de los párrafos */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Contenedor para los planes de precios */
+.plans {
+  display: flex; /* Usa flexbox para organizar los planes en una fila */
+  justify-content: center; /* Centra los planes horizontalmente */
+  gap: 20px; /* Espacio entre los planes */
+  max-width: 1000px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+/* Estilo para cada plan individual */
+.plan {
+  background-color: #e0f7fa; /* Color de fondo del plan */
+  border: 2px solid #007bb5; /* Borde del plan */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno del plan */
+  width: 250px; /* Ancho del plan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+  transition: transform 0.3s ease-in-out; /* Suaviza la transformación al hacer hover */
+}
+
+/* Efecto de hover para escalar el plan */
+.plan:hover {
+  transform: scale(1.05); /* Aumenta el tamaño del plan al pasar el ratón */
+}
+
+/* Estilo para el mejor plan (opción destacada) */
+.best-option {
+  background-color: #00acc1; /* Color de fondo para la mejor opción */
+  color: #ffffff; /* Color del texto en la mejor opción */
+}
+
+/* Estilo para el encabezado de cada plan */
+.plan h2 {
+  font-size: 1.5em; /* Tamaño de fuente para el encabezado del plan */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Estilo para mostrar el precio del plan */
+.plan .price {
+  font-size: 2.5em; /* Tamaño de fuente grande para el precio */
+  color: #007bb5; /* Color del precio */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Estilo específico para el precio en la mejor opción */
+.best-option .price {
+  color: #ffffff; /* Color del precio en la mejor opción */
+}
+
+/* Estilo para la descripción de cada plan */
+.plan p {
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #007bb5; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Elimina bordes por defecto */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 1em; /* Tamaño de fuente del texto en el botón */
+  transition: background-color 0.3s ease-in-out; /* Suaviza el cambio de color de fondo al hacer hover */
+}
+
+/* Efecto de hover para los botones */
+button:hover {
+  background-color: #005f7f; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Contenedor de precios con alineación y margen superior */
+.pricing-container {
+  display: flex; /* Usa flexbox para organizar elementos */
+  flex-direction: column; /* Organiza los elementos en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin-top: 50px; /* Espacio superior */
+}
+
+/* Media query para hacer el diseño responsivo */
+@media (max-width: 600px) {
+  .plans {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      gap: 15px; /* Espacio entre los planes */
+  }
+
+  .plan {
+      width: 80%; /* Ancho del plan al 80% en pantallas pequeñas */
+      margin: 0 auto; /* Centra el plan */
+  }
+}
+
+/* Ocultar el scroll en navegadores basados en WebKit */
+::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento */
+}
