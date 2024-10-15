@@ -1,0 +1,49 @@
+/* El menú sigue siendo fijo */
+#menu {
+  position: fixed; /* Mantiene el menú en la parte superior de la página */
+  top: 0; /* Alinea el menú al borde superior */
+  left: 0; /* Alinea el menú al borde izquierdo */
+  width: 100%; /* El menú ocupa el ancho completo de la pantalla */
+  height: 5%; /* Altura del menú */
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+  display: grid; /* Usa grid para organizar el contenido del menú */
+  place-items: center; /* Centra el contenido del menú tanto vertical como horizontalmente */
+}
+
+/* Estilos para el contenedor del contenido */
+#contenido {
+  display: grid; /* Usa grid para organizar el contenido */
+  grid-template-rows: 1fr; /* Crea una fila que ocupe el espacio disponible */
+  margin-top: 5%; /* Espacio superior para evitar superposición con el menú */
+  width: 100%; /* Ancho completo del contenedor de contenido */
+  height: 95%; /* El contenido ocupa el resto del espacio disponible */
+  padding: 0; /* Sin espaciado interno */
+  box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho y alto */
+  overflow: hidden; /* Oculta el contenido que se desborda del contenedor */
+}
+
+/* Estilo para los iframes */
+iframe {
+  display: block; /* El iframe se comporta como un bloque */
+  width: 100%; /* Ancho completo del iframe */
+  height: 100%; /* Altura completa del iframe */
+  border: none; /* Sin borde alrededor del iframe */
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin padding */
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 600px) {
+  #menu {
+    height: 10%; /* Aumenta la altura del menú en pantallas pequeñas */
+  }
+
+  #contenido {
+    margin-top: 10%; /* Aumenta el margen superior para evitar superposición con el menú */
+    height: 90%; /* Ajusta la altura del contenido para pantallas más pequeñas */
+  }
+
+  iframe {
+    height: auto; /* Ajusta la altura del iframe automáticamente */
+  }
+}
