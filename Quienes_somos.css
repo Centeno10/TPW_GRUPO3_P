@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 50%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Cambia el color de las letras fuera de las cajas a blanco */
+.box {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  border: 1px solid #00acc1;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambia el color del texto fuera de la caja a blanco */
+.box span {
+  color: white; /* Solo afecta al texto de las cajas */
+}
+
+.box:hover {
+  background-color: #d0e7f0;
+}
+
+.box:nth-child(2) {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  border-color: #0288d1;
+}
+
+.box:nth-child(3) {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  border-color: #0288d1;
+}
+
+.box:nth-child(4) {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  border-color: #0288d1;
+}
+
+.content {
+  display: none;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content img {
+  display: block;
+  margin: 10px auto; /* Centra la imagen horizontalmente */
+  width: 50%; /* Mantén el tamaño ajustado al 50% */
+  height: auto;
+  border-radius: 5px;
+}
+
+.toggle-arrow {
+  float: right;
+  font-size: 1.5em;
+  color: #292929; /* Cambia este color si es necesario */
+  transition: transform 0.3s ease;
+}
+
+/* Cuando el cuadro está abierto */
+.box.open .toggle-arrow {
+  transform: rotate(180deg);
+}
+
+/* Estilo para el texto en la parte superior */
+.about-us {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-us h2 {
+  font-size: 28px; /* Aumenta el tamaño del título */
+  color: #333; /* Mantén el color original para el título */
+  margin-bottom: 10px;
+}
+
+.about-us p {
+  font-size: 18px; /* Aumenta el tamaño del texto del contenido */
+  color: #222222; /* Cambia el color a un gris más oscuro para mayor contraste */
+  line-height: 1.6; /* Mejora el espaciado entre líneas */
+  margin: 0 auto;
+  max-width: 600px; /* Ajusta el ancho máximo para una mejor lectura */
+}
