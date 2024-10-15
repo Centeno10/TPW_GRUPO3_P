@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Profesores</title>
+    <link rel="stylesheet" href="../CSS/Profesores.css">
+    
+</head>
+<body>
+    <section id="profesores">
+        <h2>Nuestros profesores</h2>
+        <div class="carrusel-contenedor">
+            <button class="prev-btn" onclick="deslizarCarrusel(-1)">&#10094;</button>
+            <div class="carrusel">
+                <div class="profesor">
+                    <img src="../imagenes de profesores/antonio-sarosi.jpeg" alt="Antonio Sarosi">
+                    <p>Antonio Sarosi</p>
+                </div>
+                <div class="profesor">
+                    <img src="../imagenes de profesores/victor-cami.jpeg" alt="Víctor Cami">
+                    <p>Víctor Cami</p>
+                </div>
+                <div class="profesor">
+                    <img src="../imagenes de profesores/sara-nogark.png" alt="Sara Nogark">
+                    <p>Sara Nogark</p>
+                </div>
+                <div class="profesor">
+                    <img src="../imagenes de profesores/nate-gentile.jpeg" alt="Nate Gentile">
+                    <p>Nate Gentile</p>
+                </div>
+                <div class="profesor">
+                    <img src="../imagenes de profesores/wayan-sadovnic.jpeg" alt="Wayan Sadovnic">
+                    <p>Wayan Sadovnic</p>
+                </div>
+            </div>
+            <button class="next-btn" onclick="deslizarCarrusel(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <script src="../Java/Profesores.js"></script>
+</body>
+</html>
