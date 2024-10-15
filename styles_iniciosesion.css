@@ -1,0 +1,150 @@
+/* Elimina márgenes y padding por defecto, y asegura que el box-sizing incluya bordes y padding en el tamaño total */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+  font-family: Arial, sans-serif; /* Fuente del texto */
+  display: flex; /* Usar flexbox para centrar el contenido */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-color: #fff; /* Color de fondo blanco */
+}
+
+/* Estilos para el contenedor del formulario de inicio de sesión */
+.login-container {
+  background-color: #fff; /* Fondo blanco para el contenedor */
+  padding: 40px; /* Espaciado interno (padding) */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar un efecto de elevación */
+  width: 500px; /* Ancho fijo del contenedor */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  transition: all 0.3s ease; /* Transición suave para cambios en transformaciones */
+}
+
+/* Efecto al pasar el mouse sobre el contenedor */
+.login-container:hover {
+  transform: scale(1.05); /* Aumenta el tamaño del contenedor al pasar el mouse */
+}
+
+/* Estilos para el título */
+h1 {
+  font-size: 26px; /* Tamaño de la fuente */
+  margin-bottom: 25px; /* Margen inferior para separación */
+  color: #333; /* Color del texto (gris oscuro) */
+}
+
+/* Estilos para el formulario */
+form {
+  display: flex; /* Usar flexbox */
+  flex-direction: column; /* Los elementos dentro del formulario se alinean en columna */
+}
+
+/* Estilos para las etiquetas de los campos */
+label {
+  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 15px; /* Tamaño de la fuente */
+  margin-bottom: 5px; /* Margen inferior para separación */
+  color: #333; /* Color del texto */
+}
+
+/* Estilos para los campos de texto y contraseña */
+input[type="text"], input[type="password"] {
+  padding: 12px; /* Espaciado interno (padding) */
+  margin-bottom: 20px; /* Margen inferior para separación */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 15px; /* Tamaño de la fuente */
+  transition: border 0.3s ease; /* Transición suave al cambiar el borde */
+}
+
+/* Estilo al enfocar los campos de texto y contraseña */
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: rgba(84, 153, 199); /* Cambia el color del borde al azul */
+}
+
+/* Contenedor para las opciones como 'Recordarme' y '¿Olvidaste tu contraseña?' */
+.options {
+  display: flex; /* Usar flexbox */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center; /* Alinea verticalmente los elementos */
+  margin-bottom: 25px; /* Margen inferior para separación */
+}
+
+/* Estilos para el checkbox */
+input[type="checkbox"] {
+  margin: 0; /* Sin margen para el checkbox */
+}
+
+/* Ajustes de estilo para las etiquetas dentro de la sección de opciones */
+.options label {
+  margin-left: 5px; /* Margen izquierdo para separación */
+}
+
+/* Estilos para el enlace '¿Olvidaste tu contraseña?' */
+.forgot-password {
+  margin-left: auto; /* Alinea el enlace a la derecha */
+  color: rgba(84, 153, 199); /* Color azul para el enlace */
+  text-decoration: none; /* Sin subrayado por defecto */
+  font-size: 15px; /* Tamaño de la fuente */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Efecto al pasar el mouse sobre el enlace '¿Olvidaste tu contraseña?' */
+.forgot-password:hover {
+  color: #333; /* Cambia el color a gris oscuro */
+}
+
+/* Estilos para el botón de inicio de sesión */
+.login-btn {
+  background-color: rgba(84, 153, 199); /* Fondo azul */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 15px; /* Espaciado interno (padding) */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  font-size: 16px; /* Tamaño de la fuente */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.login-btn:hover {
+  background-color: #333; /* Cambia el fondo a gris oscuro */
+}
+
+/* Estilos para el enlace 'Crear cuenta' */
+.create-account {
+  display: block; /* El enlace se comporta como un bloque */
+  margin-top: 30px; /* Margen superior para separación */
+  color: #333; /* Color del texto gris oscuro */
+  text-decoration: none; /* Sin subrayado por defecto */
+  font-size: 15px; /* Tamaño de la fuente */
+  transition: text-decoration 0.3s ease; /* Transición suave para el subrayado */
+}
+
+/* Efecto al pasar el mouse sobre el enlace 'Crear cuenta' */
+.create-account:hover {
+  text-decoration: underline; /* Agrega subrayado */
+  color: rgba(84, 153, 199); /* Cambia el color a azul */
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 600px) {
+  .login-container {
+      width: 90%; /* Ajusta el ancho al 90% del ancho de la pantalla */
+      padding: 20px; /* Reduce el espaciado interno */
+  }
+
+  .options {
+      flex-direction: column; /* Los elementos de las opciones se alinean en columna */
+      align-items: flex-start; /* Alinea los elementos a la izquierda */
+  }
+
+  .forgot-password {
+      margin: 10px 0 0; /* Ajusta el margen superior */
+  }
+}
